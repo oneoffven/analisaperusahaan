@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Data Aset Perusahaan</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS Compiled -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col md:flex-row">
+
+  <!-- Sidebar Navigasi -->
+  <aside class="w-full md:w-64 bg-slate-900 text-slate-100 flex flex-col border-r border-slate-800 shrink-0">
+    <!-- Header Sidebar -->
+    <div class="p-6 border-b border-slate-800 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+          </svg>
+        </div>
+        <div>
+          <h1 class="font-bold text-lg leading-tight bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">AssetCorp</h1>
+          <span class="text-xs text-slate-500 font-medium">Dashboard System</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Sidebar -->
+    <nav class="flex-1 px-4 py-6 space-y-2">
+      <div class="text-xs font-bold text-slate-500 uppercase tracking-wider px-4 mb-2">Menu Utama</div>
+      <button class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-300 bg-blue-600 text-white shadow-lg shadow-blue-600/10">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4zM14 16a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 01-2-2v-4z"></path>
+        </svg>
+        <span>Dashboard Aset</span>
+      </button>
+    </nav>
+
+    <!-- Footer Sidebar -->
+    <div class="p-6 border-t border-slate-800 text-center text-xs text-slate-500">
+      &copy; 2026 AssetCorp.
+    </div>
+  </aside>
+
+  <!-- Konten Utama -->
+  <main class="flex-1 flex flex-col min-w-0">
+    <!-- Header Topbar -->
+    <header class="bg-white border-b border-slate-200 h-16 flex items-center justify-between px-6 md:px-8">
+      <div class="flex items-center space-x-2">
+        <h2 class="text-xl font-bold text-slate-800">Dashboard Data Aset Perusahaan</h2>
+      </div>
+      <div class="text-xs font-semibold text-slate-400" id="current-date-info">
+        Rabu, 15 Juli 2026
+      </div>
+    </header>
+
+    <!-- Area Halaman -->
+    <div class="flex-1 p-6 md:p-8 overflow-y-auto space-y-8">
+      
+      <!-- 1. DASHBOARD CARD SUMMARY -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Card 1: Total Perusahaan -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-blue-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M19 10.5V20H5V10.5l7-4.5 7 4.5zM12 3L2 9.5V22h20V9.5L12 3z"/></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Total Perusahaan</span>
+            <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900 animate-pulse" id="card-total-perusahaan">
+            0 Perusahaan
+          </div>
+        </div>
+
+        <!-- Card 2: Total Aset Oktober -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-emerald-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Aset Oktober 2025</span>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 tracking-tight" id="card-aset-oktober">
+            Rp 0
+          </div>
+        </div>
+
+        <!-- Card 3: Total Aset November -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-emerald-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Aset November 2025</span>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 tracking-tight" id="card-aset-november">
+            Rp 0
+          </div>
+        </div>
+
+        <!-- Card 4: Total Aset Desember -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-emerald-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Aset Desember 2025</span>
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 tracking-tight" id="card-aset-desember">
+            Rp 0
+          </div>
+        </div>
+
+        <!-- Card 5: Total Jumlah Kantor -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-orange-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zm-2 12H4v-2h6v2zm0-4H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 12h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8V9h8v2z"/></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Total Jumlah Kantor</span>
+            <div class="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-3xl font-extrabold text-slate-900" id="card-total-kantor">
+            0 Kantor
+          </div>
+        </div>
+
+        <!-- Card 6: Rata-rata Aset Perusahaan -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
+          <div class="absolute -right-4 -bottom-4 text-purple-50 opacity-10 group-hover:scale-110 transition-transform duration-500">
+            <svg class="w-28 h-28" fill="currentColor" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2"></path></svg>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wide">Rata-rata Aset</span>
+            <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="text-2xl font-extrabold text-slate-900 tracking-tight" id="card-rata-rata-aset">
+            Rp 0
+          </div>
+        </div>
+
+      </section>
+
+      <!-- 2. LAYOUT FORM INPUT & TABEL DATA -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- KOLOM FORM INPUT DATA (1 bagian) -->
+        <section class="bg-white rounded-3xl p-6 border border-slate-100 shadow-sm self-start space-y-6">
+          <div>
+            <h3 class="font-bold text-lg text-slate-800" id="form-title">Tambah Data Perusahaan</h3>
+            <p class="text-xs text-slate-400">Silakan masukkan data aset dan kantor perusahaan di bawah ini.</p>
+          </div>
+
+          <form id="form-perusahaan" class="space-y-4">
+            <!-- Hidden Input ID -->
+            <input type="hidden" id="form-id">
+
+            <!-- Nama Perusahaan -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-perusahaan-name">Nama Perusahaan *</label>
+              <input type="text" id="form-perusahaan-name" required class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm" placeholder="Nama Perusahaan...">
+            </div>
+
+            <!-- Wilayah -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-wilayah">Wilayah *</label>
+              <input type="text" id="form-wilayah" required class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm" placeholder="Wilayah...">
+            </div>
+
+            <!-- Aset Oktober -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-aset-oktober">Aset Oktober 2025 (Rp)</label>
+              <input type="text" id="form-aset-oktober" class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm text-right" placeholder="0">
+            </div>
+
+            <!-- Aset November -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-aset-november">Aset November 2025 (Rp)</label>
+              <input type="text" id="form-aset-november" class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm text-right" placeholder="0">
+            </div>
+
+            <!-- Aset Desember -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-aset-desember">Aset Desember 2025 (Rp)</label>
+              <input type="text" id="form-aset-desember" class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm text-right" placeholder="0">
+            </div>
+
+            <!-- Jumlah Kantor -->
+            <div>
+              <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2" for="form-jumlah-kantor">Jumlah Kantor</label>
+              <input type="number" id="form-jumlah-kantor" min="0" class="w-full px-4 py-2.5 rounded-xl border border-slate-250 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all text-sm text-right" placeholder="0">
+            </div>
+
+            <!-- Error Info Box -->
+            <div id="form-error" class="hidden text-xs text-red-650 bg-red-50 p-3 rounded-lg border border-red-150"></div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col space-y-2 pt-2">
+              <div class="flex space-x-2">
+                <!-- Tombol Simpan (aktif saat Tambah data) -->
+                <button type="button" id="btn-submit-simpan" class="flex-1 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-500/15 transition-all text-center">
+                  Simpan
+                </button>
+                <!-- Tombol Update (aktif saat Edit data) -->
+                <button type="button" id="btn-submit-update" class="hidden flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-lg shadow-emerald-500/15 transition-all text-center">
+                  Update
+                </button>
+              </div>
+              <!-- Tombol Reset / Batal -->
+              <button type="button" id="btn-reset" class="w-full py-2.5 rounded-xl border border-slate-200 text-slate-500 hover:bg-slate-50 font-bold text-sm transition-all text-center">
+                Reset / Batal
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- TABEL DATA PERUSAHAAN (2 bagian) -->
+        <section class="lg:col-span-2 space-y-6">
+          
+          <!-- SEARCH, FILTER, SORTING BAR -->
+          <div class="bg-white p-5 rounded-3xl border border-slate-100 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- 1. Search Box -->
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+              </span>
+              <input type="text" id="filter-search" class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 transition-all text-sm" placeholder="Cari nama perusahaan...">
+            </div>
+
+            <!-- 2. Filter Wilayah -->
+            <div>
+              <select id="filter-wilayah" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 transition-all text-sm text-slate-650 bg-white">
+                <option value="">Semua Wilayah</option>
+                <!-- Opsi wilayah lainnya akan digenerate dinamis -->
+              </select>
+            </div>
+
+            <!-- 3. Sorting Box -->
+            <div>
+              <select id="sort-aset" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-500/5 transition-all text-sm text-slate-650 bg-white">
+                <option value="">Urutkan Aset: Default</option>
+                <option value="okt-desc">Aset Oktober (Terbesar → Terkecil)</option>
+                <option value="okt-asc">Aset Oktober (Terkecil → Terbesar)</option>
+                <option value="nov-desc">Aset November (Terbesar → Terkecil)</option>
+                <option value="nov-asc">Aset November (Terkecil → Terbesar)</option>
+                <option value="des-desc">Aset Desember (Terbesar → Terkecil)</option>
+                <option value="des-asc">Aset Desember (Terkecil → Terbesar)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- TABLE CONTAINER -->
+          <div class="bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden flex flex-col">
+            <div class="overflow-x-auto w-full">
+              <table class="w-full text-left border-collapse">
+                <thead>
+                  <tr class="bg-slate-900 text-slate-200 text-xs font-semibold uppercase tracking-wider sticky top-0 z-10">
+                    <th class="py-4 px-6 text-center w-16">No</th>
+                    <th class="py-4 px-6 min-w-[150px]">Perusahaan</th>
+                    <th class="py-4 px-6 min-w-[120px]">Wilayah</th>
+                    <th class="py-4 px-6 text-right min-w-[140px]">Aset Okt 2025</th>
+                    <th class="py-4 px-6 text-right min-w-[140px]">Aset Nov 2025</th>
+                    <th class="py-4 px-6 text-right min-w-[140px]">Aset Des 2025</th>
+                    <th class="py-4 px-6 text-center min-w-[110px]">Growth</th>
+                    <th class="py-4 px-6 text-center min-w-[90px]">Kantor</th>
+                    <th class="py-4 px-6 text-center min-w-[150px]">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body" class="divide-y divide-slate-100 text-slate-700 text-sm">
+                  <!-- Rendered dynamically -->
+                  <tr>
+                    <td colspan="9" class="py-8 text-center text-slate-400">Memuat data...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- PAGINATION AND DATA COUNT BAR -->
+            <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-xs font-medium text-slate-500" id="pagination-info">
+                Menampilkan 0–0 dari 0 data
+              </div>
+              <div class="flex items-center space-x-1" id="pagination-controls">
+                <!-- Buttons generated dynamically -->
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- MODAL KONFIRMASI HAPUS -->
+  <div id="modal-confirm" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
+    <div class="bg-white w-full max-w-sm rounded-2xl shadow-2xl border border-slate-100 overflow-hidden transform scale-95 transition-all duration-300 p-6 space-y-6">
+      <div class="flex items-center space-x-4">
+        <div class="w-12 h-12 rounded-full bg-red-50 text-red-600 flex shrink-0 items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+        </div>
+        <div>
+          <h4 class="font-bold text-slate-800 text-base">Hapus Data Aset?</h4>
+          <p class="text-xs text-slate-400">Apakah Anda yakin ingin menghapus data perusahaan ini? Data lama akan dihapus permanen.</p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end space-x-3">
+        <button id="btn-cancel-delete" class="px-4 py-2 rounded-xl border border-slate-200 text-slate-500 hover:bg-slate-50 text-sm font-semibold transition-all">
+          Batal
+        </button>
+        <button id="btn-confirm-delete" class="px-4 py-2 rounded-xl bg-red-600 text-white hover:bg-red-700 shadow-lg text-sm font-semibold transition-all">
+          Ya, Hapus
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

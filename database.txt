@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "perusahaan": "PT. Free",
+    "wilayah": "Jakarta",
+    "asetOktober": 60000000,
+    "asetNovember": 100000000,
+    "asetDesember": 95000000,
+    "jumlahKantor": 3
+  },
+  {
+    "id": 2,
+    "perusahaan": "PT. Your",
+    "wilayah": "Yogyakarta",
+    "asetOktober": 100000000,
+    "asetNovember": 150000000,
+    "asetDesember": 95000000,
+    "jumlahKantor": 2
+  },
+  {
+    "id": 3,
+    "perusahaan": "PT. Mind",
+    "wilayah": "Bandung",
+    "asetOktober": 85000000,
+    "asetNovember": 70000000,
+    "asetDesember": 90000000,
+    "jumlahKantor": 2
+  }
+]
